@@ -1,7 +1,14 @@
 const mongoose = require('mongoose')
 const postSchema = mongoose.Schema(
-    {
-       AuthorId : mongoose.SchemaTypes.ObjectId,   //object id of the author
+    {   
+        Heading  :{
+            type     : String,
+            required : true
+        },
+        Content  :{
+            type    :String,
+            required:true
+        },
         Comments : [{                             //a list of comment objects with body author and likes 
         body        : String,
         author      : mongoose.SchemaTypes.ObjectId,

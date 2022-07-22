@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Post = require('./Post')
 const profileSchema = mongoose.Schema({
     //Profile Name
     Name : {
@@ -24,6 +25,8 @@ const profileSchema = mongoose.Schema({
     isSignedIn      : {
         type : Boolean,
         default: false
-    }
+    },
+    //Posts made by the profile
+    Posts           : [mongoose.SchemaTypes.ObjectId]
 })
 module.exports = mongoose.model('Profile',profileSchema)
