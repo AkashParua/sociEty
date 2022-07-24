@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const Profile = require('../models/Profile')
 const Post    = require('../models/Post')
 const bcrypt  = require('bcryptjs')
+const { application } = require('express')
 router.use(bodyParser.json())
 //login
 // request body -> Name and Password , encrypts the password and stores in MongoDB databse
@@ -44,10 +45,13 @@ router.post('/signIn',async(req,res)=>{
 
 //homepage/:ProfileId
 //homepage is generated according to the following of the Profile in :ProfileId
+router.get('/homepage/:ProfileId',(req,res)=>{
+    
 
+})
 
 //explore
-//homepage created with posts according to likes , even though not on followlist
+//homepage 
 
 
 //sign out
