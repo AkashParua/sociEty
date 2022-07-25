@@ -21,12 +21,10 @@ const profileSchema = mongoose.Schema({
     PendingRequests : [mongoose.SchemaTypes.ObjectId],
     //Total Likes in all the posts combined 
     TotalKarma      : Number,
-    Interests       : [String],
     isSignedIn      : {
         type : Boolean,
         default: false
     },
-    //Posts made by the profile
     Posts           : [mongoose.SchemaTypes.ObjectId]
 })
 module.exports = mongoose.model('Profile',profileSchema)

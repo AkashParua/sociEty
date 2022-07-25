@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 commentSchema = new mongoose.Schema({
-        AuthorID     : mongoose.SchemaTypes.ObjectId,
+        AuthorId     : mongoose.SchemaTypes.ObjectId,
         ParentPost   : mongoose.SchemaTypes.ObjectId,
         body         : String,
         commentlikes : Number,
