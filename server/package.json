@@ -17,6 +17,7 @@
     "express-fileupload": "^1.4.0",
     "md5": "^2.3.0",
     "mongoose": "^6.4.6",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "path": "^0.12.7"
   }
 }

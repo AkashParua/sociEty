@@ -6,6 +6,11 @@ const postSchema = mongoose.Schema(
             type     : mongoose.SchemaTypes.ObjectId,
             required : true
         },
+        ParentPost :{
+            type     : mongoose.SchemaTypes.ObjectId,
+            default  : null
+        }
+        ,
         Heading  :{
             type     : String,
             required : true
@@ -14,7 +19,8 @@ const postSchema = mongoose.Schema(
             type    :String,
             required:true
         },
-       Postlikes :  {Number,              //likes on the post 
+       Postlikes :  {
+       type       :Number,              //likes on the post 
        default    : 0
        },
        Likers    : [mongoose.SchemaTypes.ObjectId],
@@ -26,7 +32,7 @@ const postSchema = mongoose.Schema(
         type : Date,
         default : ()=> Date.now()
        },
-       Comments   : [mongoose.SchemaTypes.ObjectId]
+       Replies   : [mongoose.SchemaTypes.ObjectId]
     }
 )
 module.exports = mongoose.model('Post',postSchema)
